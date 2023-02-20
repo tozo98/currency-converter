@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<p th:text="'Input: ' + ${inputValue} + ' ' + ${sourceCurrency}"></p>
+<p th:text="'Result: ' + ${result} + ' ' + ${targetCurrency}"></p>
+<a href="/"> Return to the Converter page </a> <br> <br>
+<a href="https://www.exchangerate-api.com">Rates By Exchange Rate API</a>
+</body>
+</html>
