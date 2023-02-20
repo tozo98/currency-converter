@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class ConverterServiceImpl implements ConverterService {
 
-    CurrencyRateRetriever currencyRateRetriever;
+    private CurrencyRateRetriever currencyRateRetriever;
     @Override
     public String getResult(String input, String sourceCurrency, String targetCurrency) {
         double rate = currencyRateRetriever.getRate(sourceCurrency, targetCurrency);

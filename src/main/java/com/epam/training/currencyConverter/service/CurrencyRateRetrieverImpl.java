@@ -1,6 +1,5 @@
 package com.epam.training.currencyConverter.service;
 
-import com.epam.training.currencyConverter.mapper.ConverterAPIResponseMapper;
 import com.epam.training.currencyConverter.model.ConverterAPIResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,7 +10,6 @@ import java.io.IOException;
 @AllArgsConstructor
 public class CurrencyRateRetrieverImpl implements CurrencyRateRetriever {
 
-    private ConverterAPIResponseMapper mapper;
     private ConverterAPICaller converterAPICaller;
 
     @Override
