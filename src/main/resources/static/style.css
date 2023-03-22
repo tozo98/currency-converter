@@ -1,0 +1,64 @@
+#header {
+  background-color: cornsilk;
+  justify-content: center;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+p {
+  font-style: italic;
+}
+
+#optionsdiv {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+table {
+  text-align: center;
+  justify-content: center;
+}
+
+th {
+  padding: 10px;
+}
+
+#formdiv {
+  display: block;
+  text-align: center;
+}
+
+#form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding: 20px;
+}
+
+#submitButton {
+  margin: 10px;
+  justify-content: center;
+}
+
+input {
+  background-color: aliceblue;
+  text-align: right;
+}
+
+.formElement {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  font-style: italic;
+}
+
+.currencyOptions {
+  background-color: white;
+}

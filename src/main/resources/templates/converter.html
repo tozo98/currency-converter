@@ -1,23 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Converter</title>
-</head>
-<body>
-<h1>Currency Converter App</h1>
-<p>Fill in the form and click on the Submit button to convert the given currency.</p>
-<form th:action="@{/result}" method="get" id="form" style="padding: 20px; margin: 10 10 10 10; width: 20%">
-    <label>Input value:</label><br>
-    <input type="text" th:name="inputValue" name="uname"><br>
-    <label>Source currency:</label><br>
-    <input type="text" th:name="sourceCurrency" name="uname"><br>
-    <label>Target currency:</label><br>
-    <input type="text" th:name="targetCurrency" name="uname"><br>
-    <input type="submit" th:name="action" th:value="Submit">
-</form>
-</body>
-<script>
-
-</script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>Currency Converter App</h1>
+      <p>
+        Fill in the form and click on the Submit button to convert the given
+        currency.
+      </p>
+    </div>
+    <div id="optionsdiv">
+      <p>Common target currencies</p>
+      <table>
+        <tr id="options">
+        </tr>
+      </table>
+    </div>
+    <div id="formdiv">
+      <form
+        th:action="@{/result}"
+        method="get"
+        id="form"
+        style="padding: 20px; margin: 10 10 10 10; width: 20%"
+      >
+        <div>
+          <div class="formElement"><label>Input value:</label></div>
+          <div class="formElement">
+            <input type="text" th:name="inputValue" name="uname" />
+          </div>
+        </div>
+        <div>
+          <div class="formElement"><label>Source currency:</label></div>
+          <div class="formElement">
+            <input
+              type="text"
+              th:name="sourceCurrency"
+              name="uname"
+              value="HUF"
+            />
+          </div>
+        </div>
+        <div>
+          <div class="formElement"><label>Target currency:</label></div>
+          <div class="formElement">
+            <input
+              type="text"
+              id="target"
+              th:name="targetCurrency"
+              name="uname"
+            />
+          </div>
+        </div>
+        <div>
+          <input
+            type="submit"
+            id="submitButton"
+            th:name="action"
+            th:value="Submit"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
