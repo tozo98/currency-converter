@@ -23,10 +23,12 @@ public class ResultPageController {
             String targetCurrency,
             Model model) {
         String result = converterService.getResult(inputValue, sourceCurrency, targetCurrency);
+        String rate = converterService.getRate(sourceCurrency, targetCurrency);
         model.addAttribute("inputValue", inputValue);
         model.addAttribute("sourceCurrency", sourceCurrency);
         model.addAttribute("targetCurrency", targetCurrency);
         model.addAttribute("result", result);
+        model.addAttribute("rate", rate);
         return "result";
     }
 }
