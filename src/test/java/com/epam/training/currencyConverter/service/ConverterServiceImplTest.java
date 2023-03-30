@@ -20,7 +20,7 @@ class ConverterServiceImplTest {
 
     @Test
     void testGetResultMethodHappyPath() {
-        String expected = "200.00";
+        String expected = "200.0000";
         Mockito.when(currencyRateRetrieverMock.getRate(Mockito.anyString(),Mockito.anyString())).thenReturn(0.5);
         String result = underTest.getResult("400", "HUF", "USD");
         assertEquals(expected, result);

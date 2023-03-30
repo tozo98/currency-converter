@@ -13,11 +13,14 @@
     <div id="resultdiv">
       <h2 th:text="'Input: ' + ${inputValue} + ' ' + ${sourceCurrency}"></h2>
       <h2 th:text="'Result: ' + ${result} + ' ' + ${targetCurrency}"></h2>
-      <h4 th:text="'The current exchange rate is : 1 ' + ${sourceCurrency} + ' = ' + ${rate} + ' ' + ${targetCurrency}"></h4>
+      <h4
+        th:text="'The current exchange rate is : 1 ' + ${sourceCurrency} + ' = ' + ${rate} + ' ' + ${targetCurrency}"
+      ></h4>
       <a href="/"> Return to the Converter page </a> <br />
       <br />
     </div>
     <div id="footer">
+      <p>Note: This is a Spring MVC demo application, built for educational purposes only.</p>
       <a href="https://www.exchangerate-api.com"
         >exchangerate-api.com - Rates By Exchange Rate API</a
       >

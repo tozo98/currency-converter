@@ -17,7 +17,7 @@ public class CurrencyRateRetrieverImpl implements CurrencyRateRetriever {
         try {
             ConverterAPIResponse response = converterAPICaller.callConverterAPI(source);
             return response.getRates().get(target);
-        } catch (InterruptedException | IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

@@ -14,5 +14,4 @@ function fillMostPopularCurrencies() {
     }
 }
 
-console.log('hello');
 fillMostPopularCurrencies();

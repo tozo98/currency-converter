@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 public class DefaultControllerAdvice extends ResponseEntityExceptionHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DefaultControllerAdvice.class);
+    public static final String REDIRECT_TO_ERROR_500_PAGE = "redirect:https://http.cat/500";
 
     @ExceptionHandler(NoSuchElementException.class)
     public ResponseEntity<Object> handleNoSuchElementException(NoSuchElementException ex, WebRequest request) {
@@ -36,9 +37,9 @@ public class DefaultControllerAdvice extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<Object> handleRuntimeException(RuntimeException ex, WebRequest request) {
+    public String handleRuntimeException(RuntimeException ex, WebRequest request) {
         LOGGER.error(ex.getMessage(), ex);
-        return handleExceptionInternal(ex, "Internal server error", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR, request);
+        return REDIRECT_TO_ERROR_500_PAGE;
     }
 
 }
