@@ -49,8 +49,7 @@ th {
 }
 
 input {
-  background-color: aliceblue;
-  text-align: right;
+  text-align: left;
 }
 
 .formElement {
@@ -58,7 +57,6 @@ input {
   margin-left: auto;
   margin-right: auto;
   padding: 5px;
-  font-style: italic;
 }
 
 .currencyOptions {
@@ -87,4 +85,8 @@ input {
   margin-bottom: 50px;
   padding: 20px;
   background-color: aliceblue;
+}
+
+select {
+  width: 100%;
 }

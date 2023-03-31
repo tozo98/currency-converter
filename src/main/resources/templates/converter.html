@@ -1,75 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>Converter Home</title>
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="header">
-      <h1>Currency Converter App</h1>
-      <p>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="header">
+    <h1>Currency Converter App</h1>
+    <p>
         Fill in the form and click on the Submit button to convert the given
         currency.
-      </p>
-    </div>
-    <div id="optionsdiv">
-      <p>Common target currencies</p>
-      <table>
+    </p>
+</div>
+<div id="optionsdiv">
+    <p>Common target currencies</p>
+    <table>
         <tr id="options"></tr>
-      </table>
-    </div>
-    <div id="formdiv">
-      <form
-        th:action="@{/result}"
-        method="get"
-        id="form"
-        style="padding: 20px; margin: 10 10 10 10; width: 20%"
-      >
+    </table>
+</div>
+<div id="formdiv">
+    <form
+            th:action="@{/result}"
+            method="get"
+            id="form"
+            style="padding: 20px; margin: 10 10 10 10; width: 20%"
+    >
         <div>
-          <div class="formElement"><label>Input value:</label></div>
-          <div class="formElement">
-            <input type="text" th:name="inputValue" name="uname" />
-          </div>
+            <div class="formElement"><label>Enter the value: </label></div>
+            <div class="formElement">
+                <input type="text" th:name="inputValue" id="inputValue"/>
+            </div>
         </div>
         <div>
-          <div class="formElement"><label>Source currency:</label></div>
-          <div class="formElement">
+            <div class="formElement"><label>Source currency:</label></div>
+            <div class="formElement">
+                <select
+                        id="sourceCurrency"
+                        th:name="sourceCurrency"
+                ></select>
+            </div>
+        </div>
+        <div>
+            <div class="formElement"><label>Target currency:</label></div>
+            <div class="formElement">
+                <select
+                        id="target"
+                        th:name="targetCurrency"
+                ></select>
+            </div>
+        </div>
+        <div>
             <input
-              type="text"
-              th:name="sourceCurrency"
-              name="uname"
-              value="HUF"
+                    type="submit"
+                    id="submitButton"
+                    th:name="action"
+                    th:value="Submit"
             />
-          </div>
         </div>
-        <div>
-          <div class="formElement"><label>Target currency:</label></div>
-          <div class="formElement">
-            <input
-              type="text"
-              id="target"
-              th:name="targetCurrency"
-              name="uname"
-            />
-          </div>
-        </div>
-        <div>
-          <input
-            type="submit"
-            id="submitButton"
-            th:name="action"
-            th:value="Submit"
-          />
-        </div>
-      </form>
-    </div>
-    <div id="footer">
-      <p>Note: This is a Spring MVC demo application, built for educational purposes only.</p>
-      <a href="https://www.exchangerate-api.com"
-        >exchangerate-api.com - Rates By Exchange Rate API</a
-      >
-    </div>
-  </body>
+    </form>
+</div>
+<div id="footer">
+    <p>Note: This is a Spring MVC demo application, built for educational purposes only.</p>
+    <a href="https://www.exchangerate-api.com"
+    >exchangerate-api.com - Rates By Exchange Rate API</a
+    >
+</div>
+</body>
 </html>
